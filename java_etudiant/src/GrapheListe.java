@@ -23,15 +23,31 @@ public class GrapheListe implements Graphe{
 
 
     public List<Arc> suivants(String n) {
-        List<Arc> suiv = new ArrayList<>();
+        List<Arc> suiv ;
 
-        for (Noeud noeud : ensNoeuds){
-            if (noeud.getNom().equals(n)){
-                suiv = noeud.getAdj();
-            }
-        }
+        int index = findIndex(n);
+        suiv = ensNoeuds.get(index).getAdj();
 
         return suiv;
+    }
+
+    public int findIndex(String s){
+        int index = 0;
+
+        for (int i=0;i<ensNoeuds.size();i++){
+            if (ensNom.get(i).equals(s)){
+                index = i;
+            }
+        }
+        return index;
+    }
+
+    public void ajouterArc(String depart, String dest, double cout){
+        int indexDep = findIndex(depart);
+        int indexFin = findIndex(dest);
+
+        ensNoeuds.get(indexDep).getAdj().add(new Arc(ensNoeuds.get(indexFin),cout));
+
     }
 
     @Override
@@ -46,4 +62,6 @@ public class GrapheListe implements Graphe{
         }
         return res;
     }
+
+
 }
