@@ -1,5 +1,3 @@
-import laby.Arc;
-import laby.Noeud;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

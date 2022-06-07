@@ -1,5 +1,3 @@
-package laby;
-
 import java.util.ArrayList;
 import java.util.List;
 

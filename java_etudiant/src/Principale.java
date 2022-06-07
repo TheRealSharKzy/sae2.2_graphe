@@ -1,5 +1,3 @@
-import laby.Noeud;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,7 @@ public class Principale {
         l.add(e);
 
         GrapheListe graphe = new GrapheListe(l);
-        GrapheListe grapheFich = new GrapheListe("./Graphe_exemple1.txt");
+        GrapheListe grapheFich = new GrapheListe("./java_etudiant/documente/Graphe_exemple1.txt");
 
 
         //System.out.println(graphe);

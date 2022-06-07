@@ -1,5 +1,3 @@
-import laby.Arc;
-
 import java.util.List;
 
 public interface Graphe {

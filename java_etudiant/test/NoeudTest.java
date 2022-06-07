@@ -1,4 +1,3 @@
-import laby.Noeud;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

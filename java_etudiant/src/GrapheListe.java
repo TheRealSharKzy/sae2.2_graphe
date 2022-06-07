@@ -1,6 +1,3 @@
-import laby.Arc;
-import laby.Noeud;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,20 +43,18 @@ public class GrapheListe implements Graphe{
         ensNom = new ArrayList<>();
 
 
-        String line  = "";
+        String line  = reader.readLine();
         while (line!=null){
-            line = reader.readLine();
-            String[] tabLine = line.split("\t");
-
+            String[] tabLine = line.split("   ");
             for (int i=0;i<tabLine.length-1;i++){
                 if (!seen.contains(tabLine[i])){
                     ensNoeuds.add(new Noeud(tabLine[i]));
-                    ensNom.add(ensNoeuds.get(i).getNom());
+                    ensNom.add(tabLine[i]);
                     seen.add(tabLine[i]);
                 }
             }
-
             ajouterArc(tabLine[0],tabLine[1],Integer.parseInt(tabLine[2]));
+            line= reader.readLine();
         }
 
     }

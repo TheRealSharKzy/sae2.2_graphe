@@ -1,6 +1,3 @@
-package laby;
-
-
 /**
  * Classe représentant un arc d'un graphe
  */
@@ -22,7 +19,7 @@ public class Arc {
      * @param dest destination de l'arc
      * @param cout cout de l'arc
      */
-    public Arc(Noeud dest,double cout){
+    public Arc(Noeud dest, double cout){
         this.dest=dest.getNom();
         this.cout=cout;
         if(this.cout<0)
