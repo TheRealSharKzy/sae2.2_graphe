@@ -46,7 +46,7 @@ public class GrapheListe implements Graphe{
         int indexDep = findIndex(depart);
         int indexFin = findIndex(dest);
 
-        ensNoeuds.get(indexDep).getAdj().add(new Arc(ensNoeuds.get(indexFin),cout));
+        ensNoeuds.get(indexDep).ajouterArc(ensNoeuds.get(indexFin),cout);
 
     }
 
@@ -67,7 +67,7 @@ public class GrapheListe implements Graphe{
         String res=new String("digraph G {\n");
         for(String i:ensNom){
             for(Arc j:suivants(i)){
-                res+=i+" -> "+j.getDest()+" [label = "+j.getCout()+"]\n";
+                res+=i+" -> "+j.getDest()+" [label = "+(int)j.getCout()+"]\n";
             }
         }
         return res+"}";

@@ -30,7 +30,8 @@ public class Principale {
 
         GrapheListe graphe = new GrapheListe(l);
 
-        System.out.println(l);
+        System.out.println(graphe);
+        System.out.println(graphe.toGraphviz());
     }
 
 
