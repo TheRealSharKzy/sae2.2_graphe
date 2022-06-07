@@ -1,12 +1,12 @@
-import laby.Arc;
 import laby.Noeud;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Principale {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Noeud a = new Noeud("A");
         Noeud b = new Noeud("B");
         Noeud c = new Noeud("C");
@@ -29,9 +29,13 @@ public class Principale {
         l.add(e);
 
         GrapheListe graphe = new GrapheListe(l);
+        GrapheListe grapheFich = new GrapheListe("Graphe_exemple1.txt");
 
-        System.out.println(graphe);
-        System.out.println(graphe.toGraphviz());
+
+        //System.out.println(graphe);
+        System.out.println(grapheFich);
+        System.out.println(grapheFich.toGraphviz());
+        //System.out.println(graphe.toGraphviz());
     }
 
 
