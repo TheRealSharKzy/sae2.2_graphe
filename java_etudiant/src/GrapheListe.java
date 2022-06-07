@@ -28,7 +28,11 @@ public class GrapheListe implements Graphe{
         ensNoeuds =l;
         ensNom = new ArrayList<>();
         for (Noeud n : ensNoeuds){
-            ensNom.add(n.getNom());
+            if (!ensNom.contains(n.getNom())) {
+                ensNom.add(n.getNom());
+            } else {
+                ensNoeuds.remove(n);
+            }
         }
     }
 
