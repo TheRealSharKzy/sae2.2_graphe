@@ -33,4 +33,17 @@ public class GrapheListe implements Graphe{
 
         return suiv;
     }
+
+    @Override
+    public String toString() {
+        String res=new String();
+        for (String i:ensNom) {
+            res+=i+" ->";
+            for(Arc j:suivants(i)){
+                res+=" "+j;
+            }
+            res+="\n";
+        }
+        return res;
+    }
 }

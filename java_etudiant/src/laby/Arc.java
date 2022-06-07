@@ -12,4 +12,8 @@ public class Arc {
             this.cout=0;
     }
 
+    @Override
+    public String toString() {
+        return dest+"("+cout+")";
+    }
 }
