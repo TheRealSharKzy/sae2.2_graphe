@@ -29,7 +29,7 @@ public class Principale {
         l.add(e);
 
         GrapheListe graphe = new GrapheListe(l);
-        GrapheListe grapheFich = new GrapheListe("/home/sharkzy/sae2.2_graphe_BOILLOT_TIAN/java_etudiant/src/Graphe_exemple1.txt");
+        GrapheListe grapheFich = new GrapheListe("./Graphe_exemple1.txt");
 
 
         //System.out.println(graphe);
