@@ -39,8 +39,9 @@ public class GrapheListe implements Graphe{
     public GrapheListe(String nom) throws IOException {
         FileReader read = new FileReader(nom);
         BufferedReader reader = new BufferedReader(read);
-        List<Character> seen = new ArrayList<>();
+        List<String> seen = new ArrayList<>();
         ensNoeuds = new ArrayList<>();
+        ensNom = new ArrayList<>();
 
 
         String line  = "";
@@ -51,6 +52,8 @@ public class GrapheListe implements Graphe{
             for (int i=0;i<tabLine.length-1;i++){
                 if (!seen.contains(tabLine[i])){
                     ensNoeuds.add(new Noeud(tabLine[i]));
+                    ensNom.add(ensNoeuds.get(i).getNom());
+                    seen.add(tabLine[i]);
                 }
             }
 
