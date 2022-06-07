@@ -17,9 +17,8 @@ public class Noeud {
         return nom.equals(n.getNom());
     }
 
-    public  void ajouterArc(Noeud dest, double cout){
-        Arc arc = new Arc(dest,cout);
-        adj.add(arc);
+    public void ajouterArc(Noeud dest, double cout){
+        adj.add(new Arc(dest,cout));
     }
 
     public String getNom() {
