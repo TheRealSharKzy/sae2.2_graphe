@@ -2,7 +2,6 @@ package laby;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Noeud {
 
@@ -13,7 +12,6 @@ public class Noeud {
         this.nom = nom;
         this.adj = new ArrayList<>();
     }
-
 
     public boolean equals(Noeud n) {
         return nom.equals(n.getNom());
@@ -26,5 +24,9 @@ public class Noeud {
 
     public String getNom() {
         return nom;
+    }
+
+    public List<Arc> getAdj() {
+        return adj;
     }
 }
