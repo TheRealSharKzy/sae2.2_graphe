@@ -10,11 +10,11 @@ public class BellmanFord {
             v.setParent(n.getNom(), null);
         }
         v.setValeur(depart, 0);
-        for (int i = 1; i < listeNoeud.size(); i++) {
-            for (Arc s : g.suivants(listeNoeud.get(i).getNom())) {
-                if (v.getValeur(s.getDest()) > v.getValeur(listeNoeud.get(i).getNom()) + s.getCout()) {
-                    v.setValeur(s.getDest(), v.getValeur(listeNoeud.get(i).getNom()) + s.getCout());
-                    v.setParent(s.getDest(), listeNoeud.get(i).getNom());
+        for (Noeud n:listeNoeud) {
+            for (Arc arc : g.suivants(n.getNom())) {
+                if (v.getValeur(arc.getDest()) > v.getValeur(n.getNom()) + arc.getCout()) {
+                    v.setValeur(arc.getDest(), v.getValeur(n.getNom()) + arc.getCout());
+                    v.setParent(arc.getDest(), n.getNom());
                 }
             }
         }

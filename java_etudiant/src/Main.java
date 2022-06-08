@@ -26,5 +26,6 @@ public class Main {
 
         GrapheListe graphe = new GrapheListe(l);
         System.out.println(graphe);
+        System.out.println(BellmanFord.resoudre(graphe,"A"));
     }
 }
