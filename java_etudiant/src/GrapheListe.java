@@ -140,4 +140,8 @@ public class GrapheListe implements Graphe{
         }
         return res+"}";
     }
+
+    public List<Noeud> getEnsNoeuds() {
+        return ensNoeuds;
+    }
 }
