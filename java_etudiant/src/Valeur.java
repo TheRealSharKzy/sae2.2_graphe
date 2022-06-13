@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Classe fournie, permet de stocker des valeurs associées au noeud et des parents
@@ -17,13 +14,15 @@ public class Valeur {
      */
     Map<String, Double> valeur;
     Map<String, String> parent;
+    String depart;
 
     /**
      * constructeur vide (initialise la possibilité de stocker des valeurs)
      */
-    public Valeur() {
+    public Valeur(String d) {
         this.valeur = new TreeMap<>();
         this.parent = new TreeMap<>();
+        this.depart = d;
     }
 
     /**
@@ -85,7 +84,18 @@ public class Valeur {
             res += s + " ->  V:" + valeurNoeud + " p:" + noeudParent + "\n";
         }
         return res;
+    }
 
+    public List<String> calculerChemin(String destination){
+        List<String> parents = new ArrayList<>();
+        String p = destination;
+        parents.add(p);
+        while(!p.equals(depart)){
+            p=getParent(p);
+            parents.add(p);
+        }
+        Collections.reverse(parents);
+        return parents;
     }
 
 }

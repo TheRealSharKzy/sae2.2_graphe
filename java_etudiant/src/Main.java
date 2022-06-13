@@ -25,7 +25,9 @@ public class Main {
         l.add(e);
 
         GrapheListe graphe = new GrapheListe(l);
+        Valeur v = BellmanFord.resoudre(graphe,"A");
         System.out.println(graphe);
-        System.out.println(BellmanFord.resoudre(graphe,"A"));
+        System.out.println(v);
+        System.out.println(v.calculerChemin("E"));
     }
 }

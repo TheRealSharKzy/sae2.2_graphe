@@ -3,7 +3,7 @@ import java.util.List;
 public class BellmanFord {
 
     public static Valeur resoudre(Graphe g, String depart) {
-        Valeur v = new Valeur();
+        Valeur v = new Valeur(depart);
         List<Noeud> listeNoeud = ((GrapheListe) g).getEnsNoeuds();
         for (Noeud n : listeNoeud) {
             v.setValeur(n.getNom(), Double.MAX_VALUE);
