@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dijkstra {
+public class Djikstra {
 
     public static Valeur resoudre(Graphe g,String depart){
         List<String> Q=new ArrayList<>();
@@ -17,7 +17,7 @@ public class Dijkstra {
             Q.remove(u);
             for(String sommet:Q){
                 for(Arc arc:g.suivants(u)){
-                    if(arc.getDest()==sommet){
+                    if(arc.getDest().equals(sommet)){
                         double D=valeur.getValeur(u)+arc.getCout();
                         if(D<valeur.getValeur(sommet)){
                             valeur.setValeur(sommet,D);

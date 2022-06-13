@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class MainBellmanFord {
     public static void main(String[] args) {
         Noeud a = new Noeud("A");
         Noeud b = new Noeud("B");
@@ -26,6 +26,5 @@ public class Main {
 
         GrapheListe graphe = new GrapheListe(l);
         System.out.println(BellmanFord.resoudre(graphe,"A"));
-        System.out.println(Dijkstra.resoudre(graphe,"A"));
     }
 }
