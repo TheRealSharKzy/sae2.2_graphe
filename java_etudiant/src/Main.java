@@ -28,6 +28,6 @@ public class Main {
         Valeur v = BellmanFord.resoudre(graphe,"A");
         System.out.println(graphe);
         System.out.println(v);
-        System.out.println(v.calculerChemin("E"));
+        System.out.println(v.calculerChemin("C"));
     }
 }
