@@ -15,14 +15,12 @@ public class Djikstra {
         while (Q.size()>0){
             String u=min(Q,valeur);
             Q.remove(u);
-            for(String sommet:Q){
-                for(Arc arc:g.suivants(u)){
-                    if(arc.getDest().equals(sommet)){
-                        double D=valeur.getValeur(u)+arc.getCout();
-                        if(D<valeur.getValeur(sommet)){
-                            valeur.setValeur(sommet,D);
-                            valeur.setParent(sommet,u);
-                        }
+            for(Arc arc:g.suivants(u)){
+                if(Q.contains(arc.getDest())){
+                    double D=valeur.getValeur(u)+arc.getCout();
+                    if(D<valeur.getValeur(arc.getDest())){
+                        valeur.setValeur(arc.getDest(),D);
+                        valeur.setParent(arc.getDest(),u);
                     }
                 }
             }
