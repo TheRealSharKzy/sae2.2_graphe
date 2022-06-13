@@ -86,6 +86,11 @@ public class Valeur {
         return res;
     }
 
+    /**
+     * Donne le chemin le plus court du point de départ de valeur à la destination passé en paramétre
+     * @param destination destination du chemin
+     * @return chemin le plus court
+     */
     public List<String> calculerChemin(String destination){
         List<String> parents = new ArrayList<>();
         String p = destination;

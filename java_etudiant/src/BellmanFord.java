@@ -1,7 +1,16 @@
 import java.util.List;
 
+/**
+ * Représente l'algorithme du point fixe de Bellman Ford
+ */
 public class BellmanFord {
 
+    /**
+     * Méthode du chemin le plus court d'un graphe avec la méthode de point fixe
+     * @param g Graphe
+     * @param depart point de départ de l'algorithme
+     * @return valeur du point final de l'algorithme
+     */
     public static Valeur resoudre(Graphe g, String depart) {
         Valeur v = new Valeur(depart);
         List<Noeud> listeNoeud = ((GrapheListe) g).getEnsNoeuds();
