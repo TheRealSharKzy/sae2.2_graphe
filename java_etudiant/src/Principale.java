@@ -1,5 +1,7 @@
+import object.Graphe;
 import object.GrapheListe;
 import object.Noeud;
+import object.generationGraphe;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ import java.util.List;
 public class Principale {
 
     public static void main(String[] args) throws IOException {
-        Noeud a = new Noeud("A");
+        /*Noeud a = new Noeud("A");
         Noeud b = new Noeud("B");
         Noeud c = new Noeud("C");
         Noeud d = new Noeud("D");
@@ -36,7 +38,9 @@ public class Principale {
         //System.out.println(graphe);
         System.out.println(grapheFich);
         System.out.println(grapheFich.toGraphviz());
-        //System.out.println(graphe.toGraphviz());
+        //System.out.println(graphe.toGraphviz());*/
+        Graphe graphe=generationGraphe.generer(5);
+        System.out.println(((GrapheListe)graphe).toGraphviz());
     }
 
 
