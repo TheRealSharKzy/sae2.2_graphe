@@ -1,9 +1,13 @@
+package object;
+
+import object.Arc;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Djikstra {
 
-    public static Valeur resoudre(Graphe g,String depart){
+    public static Valeur resoudre(Graphe g, String depart){
         List<String> Q=new ArrayList<>();
         Valeur valeur=new Valeur(depart);
         for(Noeud sommet:((GrapheListe)g).getEnsNoeuds()){
@@ -24,7 +28,7 @@ public class Djikstra {
                     }
                 }
             }
-            System.out.println(valeur);
+            //System.out.println(valeur);
         }
         return valeur;
     }

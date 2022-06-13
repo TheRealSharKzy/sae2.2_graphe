@@ -1,3 +1,6 @@
+import object.GrapheListe;
+import object.Noeud;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

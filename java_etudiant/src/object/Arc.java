@@ -1,3 +1,5 @@
+package object;
+
 /**
  * Classe représentant un arc d'un graphe
  */

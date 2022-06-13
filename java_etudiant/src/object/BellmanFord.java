@@ -1,3 +1,7 @@
+package object;
+
+import object.Arc;
+
 import java.util.List;
 
 /**
@@ -28,7 +32,7 @@ public class BellmanFord {
                     }
                 }
             }
-            System.out.println(v);
+            //System.out.println(v);
         }
         return v;
     }

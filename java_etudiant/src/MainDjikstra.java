@@ -1,3 +1,6 @@
+import object.Djikstra;
+import object.GrapheListe;
+
 import java.io.IOException;
 
 public class MainDjikstra {

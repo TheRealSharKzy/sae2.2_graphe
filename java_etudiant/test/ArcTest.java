@@ -1,3 +1,5 @@
+import object.Arc;
+import object.Noeud;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

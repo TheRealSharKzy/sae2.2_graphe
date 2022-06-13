@@ -1,3 +1,6 @@
+import object.Djikstra;
+import object.GrapheListe;
+import object.Valeur;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -9,7 +12,7 @@ public class DjikstraTest {
     @Test
     public void resoudre() throws IOException {
         GrapheListe graphe=new GrapheListe("./java_etudiant/documente/Graphe_test1.txt");
-        Valeur valeur=Djikstra.resoudre(graphe,"A");
+        Valeur valeur= Djikstra.resoudre(graphe,"A");
         assertEquals(null,valeur.getParent("A"));
         assertEquals(0,valeur.getValeur("A"));
         assertEquals("A",valeur.getParent("B"));

@@ -1,3 +1,7 @@
+package object;
+
+import object.Arc;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,7 +9,7 @@ import java.util.List;
 /**
  * Classe représentant un graphe implementant la classe Graphe
  */
-public class GrapheListe implements Graphe{
+public class GrapheListe implements Graphe {
 
     /**
      * Liste des noms de tout les noeuds du graphe
