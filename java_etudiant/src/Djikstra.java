@@ -24,6 +24,7 @@ public class Djikstra {
                     }
                 }
             }
+            System.out.println(valeur);
         }
         return valeur;
     }

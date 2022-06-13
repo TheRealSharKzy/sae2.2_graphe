@@ -28,6 +28,7 @@ public class BellmanFord {
                     }
                 }
             }
+            System.out.println(v);
         }
         return v;
     }
