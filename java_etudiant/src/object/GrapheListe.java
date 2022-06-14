@@ -49,7 +49,7 @@ public class GrapheListe implements Graphe {
 
         String line  = reader.readLine();
         while (line!=null){
-            String[] tabLine = line.split("   ");
+            String[] tabLine = line.split("\t");
             for (int i=0;i<tabLine.length-1;i++){
                 if (!seen.contains(tabLine[i])){
                     ensNoeuds.add(new Noeud(tabLine[i]));

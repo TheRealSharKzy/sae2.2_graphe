@@ -7,8 +7,8 @@ public class MainDjikstra {
 
     public static void main(String[] args) throws IOException {
 
-        GrapheListe graphe = new GrapheListe("java_etudiant/documente/Graphe_exemple1.txt");
-        System.out.println(Djikstra.resoudre(graphe,"A"));
+        GrapheListe graphe = new GrapheListe("java_etudiant/documente/5.2/Graphe61.txt");
+        System.out.println(Djikstra.resoudre(graphe,"1"));
 
     }
 
