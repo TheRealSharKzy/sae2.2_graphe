@@ -57,7 +57,7 @@ public class TestEfficaciteAlgo {
         TestEfficaciteAlgo test=new TestEfficaciteAlgo();
         List<Graphe> graphes=new ArrayList<>();
         for(int i=0;i<100;i++){
-            graphes.add(new GrapheListe(10));
+            graphes.add(new GrapheListe(100));
         }
         test.calculTempsAlgoGraphes(graphes);
     }
