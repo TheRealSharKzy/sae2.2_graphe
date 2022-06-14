@@ -9,9 +9,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestEfficaciteAlgo {
+
+
+    public void temps(Graphe graphe, double avgTimeBellman, double avgTimeDijkstra){
+        double startTimeBellman = System.currentTimeMillis();
+        BellmanFord.resoudre(graphe,"1");
+        double elapsedTimeBellman = (System.currentTimeMillis() - startTimeBellman);
+        avgTimeBellman+=elapsedTimeBellman;
+
+        double startTimeDijkstra = System.currentTimeMillis();
+        Djikstra.resoudre(graphe,"1");
+        double elapsedTimeDijkstra =  (System.currentTimeMillis() - startTimeDijkstra);
+        avgTimeDijkstra+=elapsedTimeDijkstra;
+    }
     
-    public static void main(String[] args) throws IOException {
-        File dir=new File("./java_etudiant/documente/5.2.1");
+    public void calculTempsAlgoFich(File dir) throws IOException {
         List<File> files=new ArrayList<>(List.of(dir.listFiles()));
         double avgTimeBellman = 0;
         double avgTimeDijkstra = 0;
@@ -19,17 +31,20 @@ public class TestEfficaciteAlgo {
 
         for(File file : files){
             Graphe graphe=new GrapheListe("./java_etudiant/documente/5.2/"+file.getName());
+            temps(graphe,avgTimeBellman,avgTimeDijkstra);
+            compteur++;
+        }
+        System.out.println("Average time for Bellman Ford algorithm : " + (avgTimeBellman / compteur));
+        System.out.println("Average time for Dijkstra algorithm : " + (avgTimeDijkstra / compteur));
+    }
 
-            double startTimeBellman = System.currentTimeMillis();
-            BellmanFord.resoudre(graphe,"1");
-            double elapsedTimeBellman = (System.currentTimeMillis() - startTimeBellman);
-            avgTimeBellman+=elapsedTimeBellman;
+    public void calculTempsAlgoFich(List<Graphe> graphes) throws IOException {
+        double avgTimeBellman = 0;
+        double avgTimeDijkstra = 0;
+        double compteur = 0;
 
-            double startTimeDijkstra = System.currentTimeMillis();
-            Djikstra.resoudre(graphe,"1");
-            double elapsedTimeDijkstra =  (System.currentTimeMillis() - startTimeDijkstra);
-            avgTimeDijkstra+=elapsedTimeDijkstra;
-
+        for(Graphe g : graphes){
+            temps(g,avgTimeBellman,avgTimeDijkstra);
             compteur++;
         }
         System.out.println("Average time for Bellman Ford algorithm : " + (avgTimeBellman / compteur));
