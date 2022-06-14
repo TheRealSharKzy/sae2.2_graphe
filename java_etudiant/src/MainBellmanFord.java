@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Test l'algorithme de Bellman Ford
+ */
 public class MainBellmanFord {
     public static void main(String[] args) throws IOException {
         GrapheListe grapheEx1 = new GrapheListe("java_etudiant/documente/5.2/Graphe61.txt");

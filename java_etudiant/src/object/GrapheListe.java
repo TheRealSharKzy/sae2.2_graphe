@@ -38,6 +38,10 @@ public class GrapheListe implements Graphe {
         }
     }
 
+    /**
+     * Construit un graphe à partir d'un fichier
+     * @param nom Nom du fichier
+     */
     public GrapheListe(String nom) throws IOException {
         FileReader read = new FileReader(nom);
         BufferedReader reader = new BufferedReader(read);
@@ -62,6 +66,10 @@ public class GrapheListe implements Graphe {
 
     }
 
+    /**
+     * Construit un graphe aléatoire à partir d'un nombre de noeuds
+     * @param taille Nombre de noeuds
+     */
     public GrapheListe(int taille){
         Graphe graphe=generationGraphe.generer(taille);
         ensNoeuds=((GrapheListe)graphe).ensNoeuds;
@@ -150,6 +158,10 @@ public class GrapheListe implements Graphe {
         return res+"}";
     }
 
+    /**
+     * Getter de ensNoeuds
+     * @return ensNoeuds
+     */
     public List<Noeud> getEnsNoeuds() {
         return ensNoeuds;
     }

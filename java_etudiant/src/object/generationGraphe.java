@@ -3,8 +3,16 @@ package object;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe permettant de générer des graphes aléatoires
+ */
 public class generationGraphe {
 
+    /**
+     * Génére un graphe aléatoirement avec un nombre de noeuds donné
+     * @param taille Nombre de noeuds du graphe
+     * @return le graphe généré
+     */
     public static Graphe generer(int taille){
         List<Noeud> noeuds=new ArrayList<>();
         for(int i=0;i<taille;i++){
