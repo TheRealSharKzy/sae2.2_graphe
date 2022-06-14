@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class MainBellmanFord {
     public static void main(String[] args) throws IOException {
-        GrapheListe grapheEx1 = new GrapheListe("java_etudiant/documente/5.2/Graphe61.txt");
+        GrapheListe grapheEx1 = new GrapheListe("java_etudiant/documente/Graphe_boucle.txt");
 
         List<Noeud> l = new ArrayList<>();
 
@@ -30,6 +30,6 @@ public class MainBellmanFord {
         graphe.ajouterArc("C","E",3);
         graphe.ajouterArc("D","E",5);
         //System.out.println(BellmanFord.resoudre(graphe,"A"));
-        System.out.println(BellmanFord.resoudre(grapheEx1,"1"));
+        System.out.println(BellmanFord.resoudre(grapheEx1,"A"));
     }
 }

@@ -83,7 +83,9 @@ public class TestEfficaciteAlgo {
         for(int i=0;i<100;i++){
             graphes.add(new GrapheListe(100));
         }
-        test.calculTempsAlgoGraphes(graphes);
+       test.calculTempsAlgoGraphes(graphes);
+
+
     }
 
 }

@@ -5,8 +5,17 @@ import object.Arc;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Effectue l'algorithme de Djikstra
+ */
 public class Djikstra {
 
+    /**
+     * Resoud l'algorithme de Dijkstra pour un graphe donné
+     * @param g Graphe
+     * @param depart point de départ de l'algorithme
+     * @return Valeur après l'algorithme
+     */
     public static Valeur resoudre(Graphe g, String depart){
         List<String> Q=new ArrayList<>();   //utilisation d'une liste de noeuds à traiter
         Valeur valeur=new Valeur(depart);   //creer un valeur
@@ -33,6 +42,12 @@ public class Djikstra {
         return valeur;  //retourner le resultat
     }
 
+    /**
+     * Prend le minimum d'une liste pour les valeurs
+     * @param list liste où prendre le minimum
+     * @param valeur valeur courante de l'algorithme
+     * @return  minimum
+     */
     private static String min(List<String> list, Valeur valeur){
         String res=list.get(0); //le premier élément de la listre
         for(int i=1;i<list.size();i++){ //parcoure tout les rests
