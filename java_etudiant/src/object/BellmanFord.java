@@ -37,6 +37,26 @@ public class BellmanFord {
         return v;   //retourner le resultat
     }
 
+    /*
+    fonction resoudre(graphe:Graphe,depart:String):L(X)
+        debut
+        pour chaque noeud dans graphe faire:
+            L(noeud)=infini
+            parent(noeud)=null
+        fpour
+        L(depart)=0
+        pour i de 1 à graphe.nbNoeud faire
+            pour chaque arc(u,v) dans graphe faire
+                si L(v)>L(u)+arc(u,v).cout alor
+                    L(v)=L(u)+arc(u,v).cout
+                    parent(v)=u
+                fsi
+            fpour
+        fpour
+        retourner L(x)
+        fin
+     */
+
 }
 
 

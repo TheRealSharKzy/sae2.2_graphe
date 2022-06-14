@@ -80,7 +80,7 @@ public class TestEfficaciteAlgo {
     public static void main(String[] args) throws IOException {
         TestEfficaciteAlgo test=new TestEfficaciteAlgo();
         List<Graphe> graphes=new ArrayList<>();
-        for(int i=0;i<10;i++){
+        for(int i=0;i<100;i++){
             graphes.add(new GrapheListe(100));
         }
         test.calculTempsAlgoGraphes(graphes);
