@@ -39,7 +39,7 @@ public class Principale {
         System.out.println(grapheFich);
         System.out.println(grapheFich.toGraphviz());
         //System.out.println(graphe.toGraphviz());*/
-        Graphe graphe = generationGraphe.generer(5);
+        Graphe graphe= new GrapheListe(10);
         System.out.println(((GrapheListe)graphe).toGraphviz());
     }
 

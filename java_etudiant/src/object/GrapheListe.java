@@ -62,6 +62,12 @@ public class GrapheListe implements Graphe {
 
     }
 
+    public GrapheListe(int taille){
+        Graphe graphe=generationGraphe.generer(taille);
+        ensNoeuds=((GrapheListe)graphe).ensNoeuds;
+        ensNom=((GrapheListe)graphe).ensNom;
+    }
+
     /**
      * Getter de ensNom
      * @return liste des noms des noeuds du graphe

@@ -67,6 +67,7 @@ public class generationGraphe {
                     for(Arc arc:noeud.getAdj()){
                         if(arc.getDest().equals(noeudDest.getNom())){
                             contient=true;
+                            break;
                         }
                     }
                     if(!contient){

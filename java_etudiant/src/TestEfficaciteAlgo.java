@@ -24,7 +24,7 @@ public class TestEfficaciteAlgo {
         double elapsedTimeDijkstra =  (System.currentTimeMillis() - startTimeDijkstra);
         avgTimeDijkstra+=elapsedTimeDijkstra;
     }
-    
+
     public void calculTempsAlgoFich(File dir) throws IOException {
         List<File> files=new ArrayList<>(List.of(dir.listFiles()));
         avgTimeBellman = 0;
@@ -52,4 +52,14 @@ public class TestEfficaciteAlgo {
         System.out.println("Average time for Bellman Ford algorithm : " + (avgTimeBellman / compteur));
         System.out.println("Average time for Dijkstra algorithm : " + (avgTimeDijkstra / compteur));
     }
+
+    public static void main(String[] args) throws IOException {
+        TestEfficaciteAlgo test=new TestEfficaciteAlgo();
+        List<Graphe> graphes=new ArrayList<>();
+        for(int i=0;i<100;i++){
+            graphes.add(new GrapheListe(10));
+        }
+        test.calculTempsAlgoGraphes(graphes);
+    }
+
 }
