@@ -50,7 +50,7 @@ public class TestEfficaciteAlgo {
         double compteur = 0;
 
         for(File file : files){
-            Graphe graphe=new GrapheListe("./java_etudiant/documente/5.2/"+file.getName());
+            Graphe graphe=new GrapheListe(dir.getPath()+"/"+file.getName());
             temps(graphe);
             compteur++;
         }
@@ -79,11 +79,12 @@ public class TestEfficaciteAlgo {
 
     public static void main(String[] args) throws IOException {
         TestEfficaciteAlgo test=new TestEfficaciteAlgo();
-        List<Graphe> graphes=new ArrayList<>();
-        for(int i=0;i<100;i++){
+        /*List<Graphe> graphes=new ArrayList<>();
+        for(int i=0;i<1000;i++){
             graphes.add(new GrapheListe(100));
-        }
-       test.calculTempsAlgoGraphes(graphes);
+        }*/
+        File f = new File("java_etudiant/documente/5.2.1");
+       test.calculTempsAlgoFich(f);
 
 
     }

@@ -191,7 +191,11 @@ public class Labyrinthe {
         return this.murs[x][y];
     }
 
-    public Graphe genererGrapheque(){
+    /**
+     * Génére un graphe à partir d'un labyrinthe
+     * @return Le graphe généré
+     */
+    public Graphe genererGraphe(){
         List<Noeud> noeuds=new ArrayList<>();
         for(int i=0;i<murs.length;i++){
             for (int j=0;j<murs[i].length;j++){
@@ -226,6 +230,11 @@ public class Labyrinthe {
         return graphe;
     }
 
+    /**
+     * Converti le nom du noeud en position
+     * @param nom nom du noeud
+     * @return Position du noeud
+     */
     private int[] toPosition(String nom){
         int[] res=new int[2];
         String positon="";
