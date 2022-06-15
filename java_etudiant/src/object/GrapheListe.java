@@ -93,9 +93,12 @@ public class GrapheListe implements Graphe {
         List<Arc> suiv ;
 
         int index = findIndex(n);
-        suiv = ensNoeuds.get(index).getAdj();
-
-        return suiv;
+        if(index>-1){
+            suiv = ensNoeuds.get(index).getAdj();
+            return suiv;
+        }else {
+            return null;
+        }
     }
 
     /**
@@ -103,7 +106,7 @@ public class GrapheListe implements Graphe {
      * @param s nom du noeud
      * @return index du noeud
      */
-    public int findIndex(String s){
+    private int findIndex(String s){
         int index = -1;
 
         for (int i=0;i<ensNoeuds.size();i++){
@@ -124,7 +127,7 @@ public class GrapheListe implements Graphe {
         int indexDep = findIndex(depart);
         int indexFin = findIndex(dest);
 
-        ensNoeuds.get(indexDep).ajouterArc(ensNoeuds.get(indexFin),cout);
+        if(indexFin>-1&&indexDep>-1)ensNoeuds.get(indexDep).ajouterArc(ensNoeuds.get(indexFin),cout);
 
     }
 

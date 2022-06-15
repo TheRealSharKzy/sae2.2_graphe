@@ -68,6 +68,13 @@ class GrapheListeTest {
     }
 
     @Test
+    public void suivant_noeud_inexstant(){
+        List<Noeud> list=new ArrayList<>();
+        GrapheListe graphe=new GrapheListe(list);
+        assertEquals(null,graphe.suivants("A"));
+    }
+
+    @Test
     public void suivant_avec_arc(){
         List<Noeud> list=new ArrayList<>();
         Noeud a=new Noeud("A");
@@ -101,6 +108,18 @@ class GrapheListeTest {
         Assertions.assertEquals(a.getAdj(),gl.suivants("A"));
         Assertions.assertEquals(b.getAdj(),gl.suivants("B"));
         Assertions.assertEquals(c.getAdj(),gl.suivants("C"));
+    }
+
+    @Test
+    public void ajouterArc_noeud_inexistant(){
+        List<Noeud> list=new ArrayList<>();
+        Noeud a=new Noeud("A");
+        Noeud z=new Noeud("Z");
+        list.add(a);
+        GrapheListe gl=new GrapheListe(list);
+        gl.ajouterArc("A","Z",1);
+        gl.ajouterArc("Z","A",2);
+        Assertions.assertEquals(0,gl.suivants("A").size());
     }
 
     @Test

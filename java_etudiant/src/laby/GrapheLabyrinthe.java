@@ -24,11 +24,6 @@ public class GrapheLabyrinthe implements Graphe{
     }
 
     @Override
-    public void ajouterArc(String noeud1, String noeud2, double cout) {
-        graphe.ajouterArc(noeud1,noeud2,cout);
-    }
-
-    @Override
     public String toGraphviz() {
         return graphe.toGraphviz();
     }
@@ -36,5 +31,9 @@ public class GrapheLabyrinthe implements Graphe{
     @Override
     public List<Noeud> getEnsNoeuds() {
         return graphe.getEnsNoeuds();
+    }
+
+    public Graphe getGraphe() {
+        return graphe;
     }
 }
