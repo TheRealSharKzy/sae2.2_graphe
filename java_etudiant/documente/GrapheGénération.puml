@@ -1,9 +1,19 @@
 @startuml
 digraph G {
-0 -> 2 [label = 32]
-1 -> 0 [label = 91]
-2 -> 1 [label = 86]
-2 -> 0 [label = 46]
+0 -> 5 [label = 80]
+1 -> 7 [label = 98]
+2 -> 1 [label = 18]
+2 -> 0 [label = 9]
+2 -> 9 [label = 15]
+3 -> 8 [label = 14]
+4 -> 3 [label = 4]
+4 -> 2 [label = 10]
+4 -> 6 [label = 51]
+5 -> 1 [label = 58]
+6 -> 1 [label = 33]
+7 -> 5 [label = 55]
+7 -> 4 [label = 80]
+8 -> 1 [label = 28]
+9 -> 5 [label = 31]
 }
-
 @enduml

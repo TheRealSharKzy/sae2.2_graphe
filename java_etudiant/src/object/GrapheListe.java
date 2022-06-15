@@ -104,7 +104,7 @@ public class GrapheListe implements Graphe {
      * @return index du noeud
      */
     public int findIndex(String s){
-        int index = 0;
+        int index = -1;
 
         for (int i=0;i<ensNoeuds.size();i++){
             if (ensNom.get(i).equals(s)){

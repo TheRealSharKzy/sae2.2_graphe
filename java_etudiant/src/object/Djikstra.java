@@ -19,7 +19,7 @@ public class Djikstra {
     public static Valeur resoudre(Graphe g, String depart){
         List<String> Q=new ArrayList<>();   //utilisation d'une liste de noeuds à traiter
         Valeur valeur=new Valeur(depart);   //creer un valeur
-        for(Noeud sommet:((GrapheListe)g).getEnsNoeuds()){  //ajouter chaque noeud dans valeur
+        for(Noeud sommet: g.getEnsNoeuds()){  //ajouter chaque noeud dans valeur
             valeur.setValeur(sommet.getNom(),Double.MAX_VALUE); //un poid d'un noeud initialise infini
             valeur.setParent(sommet.getNom(), null);    //un parent du poeud initialise null
             Q.add(sommet.getNom()); //ajouter le noeud dans Q
