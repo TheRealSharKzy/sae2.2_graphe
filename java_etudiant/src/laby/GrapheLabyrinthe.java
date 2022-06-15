@@ -10,13 +10,11 @@ public class GrapheLabyrinthe implements Graphe{
     Graphe graphe;
 
     public GrapheLabyrinthe(Labyrinthe labyrinthe){
-        graphe= labyrinthe.genererGrapheque();
+        graphe= labyrinthe.genererGraphe();
     }
 
     @Override
-    public List<String> listeNoeuds() {
-        return graphe.listeNoeuds();
-    }
+    public List<String> listeNoeuds() { return graphe.listeNoeuds(); }
 
     @Override
     public List<Arc> suivants(String n) {
