@@ -20,13 +20,13 @@ public class BellmanFord {
             v.setValeur(n.getNom(), Double.MAX_VALUE);  //les poids des noeuds initialisent infini
             v.setParent(n.getNom(), null);  //les antécédants des noeuds initialisent null
         }
-        v.setValeur(depart, 0); //le poid de antécédant de noeud de depart initialise 0;
+        v.setValeur(depart, 0); //le poid de l'antécédant du noeud de depart initialise 0;
         boolean changement = true;
-        while (changement){   //reperter pluseure fois
+        while (changement){   //repete plusieurs fois
             changement = false;
             for (Noeud n:listeNoeud) {  //pour chaque noeud
                 for (Arc arc : g.suivants(n.getNom())) {    //pour chaque arc
-                    if (v.getValeur(arc.getDest()) > v.getValeur(n.getNom()) + arc.getCout()) { //si le poid du noeud est superieur au poid du chemin
+                    if (v.getValeur(arc.getDest()) > v.getValeur(n.getNom()) + arc.getCout()) { //si le poids du noeud est superieur au poids du chemin
                         changement = true;
                         v.setValeur(arc.getDest(), v.getValeur(n.getNom()) + arc.getCout());    //changer le chemin
                         v.setParent(arc.getDest(), n.getNom()); //changer le parent
@@ -46,9 +46,12 @@ public class BellmanFord {
             parent(noeud)=null
         fpour
         L(depart)=0
-        pour i de 1 à graphe.nbNoeud faire
+        changement=vrai
+        tant que changement faire
+            changement=faux
             pour chaque arc(u,v) dans graphe faire
-                si L(v)>L(u)+arc(u,v).cout alor
+                si L(v)>L(u)+arc(u,v).cout alors
+                    changement=vrai
                     L(v)=L(u)+arc(u,v).cout
                     parent(v)=u
                 fsi

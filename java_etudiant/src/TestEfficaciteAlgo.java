@@ -1,5 +1,5 @@
 import object.BellmanFord;
-import object.Djikstra;
+import object.Dijkstra;
 import object.Graphe;
 import object.GrapheListe;
 
@@ -29,12 +29,12 @@ public class TestEfficaciteAlgo {
      */
     public void temps(Graphe graphe){
         double startTimeBellman = System.currentTimeMillis();
-        BellmanFord.resoudre(graphe,"1");
+        BellmanFord.resoudre(graphe,"0");
         double elapsedTimeBellman = (System.currentTimeMillis() - startTimeBellman);
         avgTimeBellman+=elapsedTimeBellman;
 
         double startTimeDijkstra = System.currentTimeMillis();
-        Djikstra.resoudre(graphe,"1");
+        Dijkstra.resoudre(graphe,"0");
         double elapsedTimeDijkstra =  (System.currentTimeMillis() - startTimeDijkstra);
         avgTimeDijkstra+=elapsedTimeDijkstra;
     }
@@ -56,14 +56,14 @@ public class TestEfficaciteAlgo {
         }
         System.out.println("Average time for Bellman Ford algorithm : " + (avgTimeBellman / compteur));
         System.out.println("Average time for Dijkstra algorithm : " + (avgTimeDijkstra / compteur));
-        System.out.println("Ratio de perf bellman ford :" + (avgTimeBellman / compteur) / (avgTimeDijkstra / compteur) );
+        System.out.println("Ratio de perf Dijkstra :" + (avgTimeBellman / compteur) / (avgTimeDijkstra / compteur) );
     }
 
     /**
      * Calcul le temps moyens pour les deux algorithmes à partir d'une liste de graphe
      * @param graphes liste de graphe
      */
-    public void calculTempsAlgoGraphes(List<Graphe> graphes) throws IOException {
+    public void calculTempsAlgoGraphes(List<Graphe> graphes) {
         avgTimeBellman = 0;
         avgTimeDijkstra = 0;
         double compteur = 0;
@@ -77,16 +77,13 @@ public class TestEfficaciteAlgo {
         System.out.println("Ratio de perf dijkstra :" + (avgTimeBellman / compteur) / (avgTimeDijkstra / compteur) );
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         TestEfficaciteAlgo test=new TestEfficaciteAlgo();
-        /*List<Graphe> graphes=new ArrayList<>();
-        for(int i=0;i<1000;i++){
+        List<Graphe> graphes=new ArrayList<>();
+        for(int i=0;i<100;i++){
             graphes.add(new GrapheListe(100));
-        }*/
-        File f = new File("java_etudiant/documente/5.2.1");
-       test.calculTempsAlgoFich(f);
-
-
+        }
+       test.calculTempsAlgoGraphes(graphes);
     }
 
 }

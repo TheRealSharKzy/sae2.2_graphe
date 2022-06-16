@@ -1,14 +1,12 @@
 package object;
 
-import object.Arc;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Effectue l'algorithme de Djikstra
  */
-public class Djikstra {
+public class Dijkstra {
 
     /**
      * Resoud l'algorithme de Dijkstra pour un graphe donné
